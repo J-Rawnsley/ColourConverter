@@ -1,5 +1,5 @@
 function rgb(r, g, b) {
-	return false;
+	return "hiiiiii";
 }
 
 module.exports = rgb
