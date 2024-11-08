@@ -5,7 +5,7 @@ test('rgb function returns a string', () => {
 	expect(typeof result).toBe('string');
 });
 
-test("returned string has a length of 6 characters", () => {
+test("returned string has a length of 7 characters", () => {
 	const result = rgb(100, 0, 255)
 	expect(result.length).toBe(7)
 })
@@ -34,7 +34,7 @@ test("invalid input returns error message 1", () => {
 	expect(rgb("187", 45, 230)).toThrow()
 })
 
-test("invalid input returns error message 1", () => {
+test("invalid input returns error message 1", (inputError) => {
 	expect(rgb()).toThrow()
 })
 
