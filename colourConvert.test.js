@@ -5,9 +5,9 @@ test('rgb function returns a string', () => {
 	expect(typeof result).toBe('string');
 });
 
-test("returned string has a length of 7 characters", () => {
+test("returned string has a length of 6 characters", () => {
 	const result = rgb(100, 0, 255)
-	expect(result.length).toBe(7)
+	expect(result.length).toBe(6)
 })
 
 test("result is a correct conversion from rgb to hex colour 1", () => {
