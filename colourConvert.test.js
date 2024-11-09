@@ -31,18 +31,18 @@ test("result is a correct conversion from rgb to hex colour 4", () => {
 })
 
 test("invalid input returns error message 1", () => {
-	expect(rgb("187", 45, 230)).toThrow()
-})
-
-test("invalid input returns error message 1", (inputError) => {
-	expect(rgb()).toThrow()
+	expect(() => {rgb("187", 45, 230)}).toThrow()
 })
 
 test("invalid input returns error message 1", () => {
-	expect(rgb(45, 230)).toThrow()
+	expect(() => {rgb()}).toThrow()
 })
 
 test("invalid input returns error message 1", () => {
-	expect(rgb(45, 300, 0)).toThrow()
+	expect(() => {rgb(45, 230)}).toThrow()
+})
+
+test("invalid input returns error message 1", () => {
+	expect(() => {rgb(45, 300, 0)}).toThrow()
 })
 
