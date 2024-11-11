@@ -1,6 +1,6 @@
 const { rgb, hsl } = require('./colourConvert');
 
-describe('rgb input converter', () => {
+describe('rgb to hex converter', () => {
 	it('returns a string', () => {
 		const result = rgb(100, 0, 255);
 		expect(typeof result).toBe('string');
@@ -71,7 +71,7 @@ describe('rgb input converter', () => {
 	});
 });
 
-describe('hsl input converter', () => {
+describe('hsl to hex converter', () => {
 	it('returns a string', () => {
 		const result = hsl(264, 100, 50);
 		expect(typeof result).toBe('string');
@@ -82,19 +82,24 @@ describe('hsl input converter', () => {
 		expect(result.length).toBe(6);
 	});
 
+	it('returns a correct conversion of achromatic colours', () => {
+		const result = hsl(264, 0, 50);
+		expect(result).toBe("808080");
+	});
+
 	it('returns a correct conversion from rgb to hex colour 1', () => {
 		const result = hsl(264, 100, 50);
-		expect(result).toBe('6400FF');
+		expect(result).toBe('6600FF');
 	});
 
 	it('returns a correct conversion from rgb to hex colour 2', () => {
 		const result = hsl(23, 100, 39);
-		expect(result).toBe('C84C00');
+		expect(result).toBe('C74C00');
 	});
 
 	it('returns a correct conversion from rgb to hex colour 3', () => {
 		const result = hsl(139, 46, 49);
-		expect(result).toBe('43B768');
+		expect(result).toBe('43B668');
 	});
 
 	it('returns a correct conversion from rgb to hex colour 4', () => {
